@@ -7,3 +7,4 @@ use App\Http\Controllers\Auth\LoginController;
 Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login',[LoginController::class, 'authenticate']);
