@@ -8,4 +8,21 @@
    <div>
       github
    </div>
+
+   @auth
+   {{-- LOGOUT --}}
+      <form class="inline" action=" {{ route('auth.logout') }}" method="POST">
+         @csrf
+         <button type="submit" class="bg-white border-2 p-2">
+            Sair
+         </button>
+      </form>
+   @endauth
+   
+   @guest
+   {{-- LOGIN --}}
+      <a href="{{ route('site.login') }}" class="bg-white border-2 p-2">
+         Login
+      </a>
+   @endguest
 </header>

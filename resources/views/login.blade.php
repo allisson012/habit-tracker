@@ -4,7 +4,7 @@
             Faça o login
         </h1>
         <section class="mt-4">
-            <form action="/login" method="POST">
+            <form action=" {{ route('auth.login') }}" method="POST">
                 @csrf
                 @error('email')
                     <p class="text-red-500 text-xl mt-1"> 
